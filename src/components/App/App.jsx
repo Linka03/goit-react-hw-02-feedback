@@ -1,8 +1,9 @@
 // App.jsx
 import React, { Component } from 'react';
-import FeedbackOptions from './FeedbackOptions';
-import Statistics from './Statistics';
-import Section from './Section';
+import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
+import Statistics from '../Statistics/Statistics';
+import Section from '../Section/Section';
+import styles from '../App/App'; 
 
 class App extends Component {
   state = {
@@ -34,7 +35,7 @@ class App extends Component {
     const options = ['good', 'neutral', 'bad'];
 
     return (
-      <div>
+      <div className={styles.container}>
         <Section title="Leave feedback">
           <FeedbackOptions
             options={options}
